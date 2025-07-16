@@ -1,0 +1,10 @@
+# GoPro Max .360 to Dual Fisheye Converter Requirements
+
+# Core image processing for circular masking
+Pillow>=8.0.0
+
+# Optional: Progress bars for batch processing (uncomment if desired)
+# tqdm>=4.60.0
+
+# Python 3.6+ is required
+# FFmpeg must be installed separately on the system
