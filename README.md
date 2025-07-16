@@ -1,15 +1,13 @@
-# GoPro Max .360 to Dual Fisheye Converter
-
-A complete solution for converting GoPro Max .360 files to dual fisheye format (LRV-style) with proper projection mapping and optional circular masking.
+These scripts aid in converting GoPro Max .360 files to dual fisheye format (similar to GoPro's .LRV files).
 
 ## Features
 
-- ✅ **Accurate Projection Conversion**: EAC → Equirectangular → Dual Fisheye
-- ✅ **Exact GoPro LRV Dimensions**: 1408x704 pixels with correct FOV
-- ✅ **Audio Preservation**: Maintains original audio tracks
-- ✅ **Circular Masking**: Optional black circular borders around fisheye circles
-- ✅ **Batch Processing**: Process multiple files at once
-- ✅ **Progress Monitoring**: Real-time conversion progress
+- **Accurate Projection Conversion**: EAC → Equirectangular → Dual Fisheye
+- **Exact GoPro LRV Dimensions**: 1408x704 pixels with correct FOV
+- **Audio Preservation**: Maintains original audio tracks
+- **Circular Masking**: Optional black circular borders around fisheye circles
+- **Batch Processing**: Process multiple files at once
+- **Progress Monitoring**: Real-time conversion progress
 
 ## Requirements
 
@@ -86,23 +84,9 @@ python3 batch_convert.py ./input_folder/ ./output_folder/ --add-masking
 4. **Output**: 1408×704 dual fisheye video
 
 ### Circular Masking
-- Uses the same logic as `make_transparent.py`
 - Circle radius: 45% of video height + 20px padding
 - Left circle: centered at 1/4 width
 - Right circle: centered at 3/4 width
-
-## File Structure
-
-```
-gopro-max-converter/
-├── convert_gopro_360.py       # Main conversion script
-├── add_circular_masking.py    # Circular masking script
-├── batch_convert.py           # Batch processing script
-├── requirements.txt           # Python dependencies
-├── README.md                  # This file
-├── examples/                  # Example files and outputs
-└── docs/                      # Additional documentation
-```
 
 ## Supported Formats
 
@@ -170,7 +154,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [GoPro Max Official Tools](https://gopro.com/en/us/shop/softwareandapp)
 - [FFmpeg v360 Documentation](https://ffmpeg.org/ffmpeg-filters.html#v360)
-
----
-
-**Note**: This is an unofficial tool. GoPro Max and .360 are trademarks of GoPro, Inc.
